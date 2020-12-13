@@ -89,11 +89,11 @@ namespace ConsoleApp2
             foreach (var it1 in mysymbols1) // иду по символам строки
                 foreach (var it2 in mysymbols2)
                 {
+                    MySymbol = it1 + it2; //сложение двух символов для проверки соответствия c грамматикой
                     for (int i = 0; i < MyGrammar.Count; i++)
                     {
                         for (int j = 1; j < MyGrammar[i].Count; j++)
                         {
-                                MySymbol = it1 + it2; //сложение двух символов для проверки соответствия c грамматикой
                                 if (MySymbol == MyGrammar[i][j] && endstr == "_")
                                     endstr = MyGrammar[i][0];//если соответствие найдено 1 раз
                                 else if (MySymbol == MyGrammar[i][j] && endstr != "_")

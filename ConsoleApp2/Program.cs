@@ -94,9 +94,9 @@ namespace ConsoleApp2
                         for (int j = 1; j < MyGrammar[i].Count; j++)
                         {
                                 MySymbol = it1 + it2; //сложение двух символов для проверки соответствия c грамматикой
-                                if (MySymbol == MyGrammar[i][j] && MySymbol != "" && (endstr == "_"))
+                                if (MySymbol == MyGrammar[i][j] && endstr == "_")
                                     endstr = MyGrammar[i][0];//если соответствие найдено 1 раз
-                                else if (MySymbol == MyGrammar[i][j] && MySymbol != "" && (endstr != "_"))
+                                else if (MySymbol == MyGrammar[i][j] && endstr != "_")
                                     endstr += $",{MyGrammar[i][0]}"; //если соответствие найдено более одного раза
                         }
 
